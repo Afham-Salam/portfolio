@@ -95,6 +95,7 @@ export default function Home({}: Props) {
     </div>
     <About/>
     <Skill/>
+    <Project/>
     
     </>
 
