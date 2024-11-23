@@ -38,7 +38,7 @@ export default function Navbar({}: Props) {
   const [menu, setMenu] = useState<boolean>(false);
 
   return (
-    <div className="flex  items-center bg-black justify-between w-full h-[70px] relative z-[100] shadow-md px-4 md:px-6 lg:px-10">
+    <div className="fixed flex  items-center bg-black justify-between w-full h-[70px]  z-[100] shadow-md px-4 md:px-6 lg:px-10">
       
       <div className="flex items-center w-full gap-3 lg:w-auto">
         

@@ -10,6 +10,7 @@ export default function App({}: Props) {
     <Navbar/>
     <Outlet />
     
+    
     </>
   )
 }

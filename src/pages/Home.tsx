@@ -1,11 +1,15 @@
 import React from "react";
 import photo from "/photo.jpg";
 import { Link } from "react-router-dom";
+import About from "./About";
+import Skill from "./Skill";
+import Project from "./Project";
 
 type Props = {};
 
 export default function Home({}: Props) {
   return (
+    <>
     <div
       id="home"
       className="lg:h-[93vh]  w-full flex flex-col-reverse md:flex-row justify-center items-center lg:gap-7 gap-5  bg-black pt-20 lg:pt-0"
@@ -87,6 +91,12 @@ export default function Home({}: Props) {
       <div className="">
         <img src={photo} alt="photo" className="md:w-[370px] w-[300px]" />
       </div>
+     
     </div>
+    <About/>
+    
+    </>
+
+
   );
 }
