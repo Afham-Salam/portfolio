@@ -13,7 +13,7 @@ type Props = {};
 
 export default function Project({}: Props) {
   return (
-    <div className="w-full   lg:h-screen h-screen flex flex-col lg:pt-0 pt-20 gap-20  items-center justify-center bg-black">
+    <div className="w-full   lg:h-screen  flex flex-col lg:pt-0 pt-20 gap-20  items-center justify-center bg-black">
       <p className="first-letter:text-[#fec544] text-4xl tracking-wider font-semibold text-white">
         PROJECTS
       </p>
