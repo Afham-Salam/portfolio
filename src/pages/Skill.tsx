@@ -15,7 +15,7 @@ export default function Skill({}: Props) {
   return (
     <div className='w-full lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20  items-center justify-center bg-black'>
        <p className="first-letter:text-[#fec544] text-4xl tracking-wider font-semibold text-white">
-        Skills
+        SKILLS
       </p>
 
       <div className="flex gap-6 flex-wrap justify-center items-center lg:px-20 ">

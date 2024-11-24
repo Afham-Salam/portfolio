@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import About from "./About";
 import Skill from "./Skill";
 import Project from "./Project";
+import Contact from "./Contact";
 
 type Props = {};
 
@@ -96,6 +97,7 @@ export default function Home({}: Props) {
     <About/>
     <Skill/>
     <Project/>
+    <Contact/>
     
     </>
 

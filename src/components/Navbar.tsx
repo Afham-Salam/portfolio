@@ -16,7 +16,7 @@ type Props = {};
 const MobileMenu: React.FC<{ menuItems: MenuItems[],isOpen:boolean }> = ({ menuItems,isOpen }) => (
 <div className="relative">
 <div
-  className={`absolute top-5   w-[200px] h-screen bg-black shadow-md z-50 transition-transform duration-500 ease-in-out ${
+  className={`absolute top-5   w-[200px] h-screen bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-md z-50 transition-transform duration-500 ease-in-out ${
     isOpen ? "translate-x-0 -left-5" : "-translate-x-full left-0"
   }`}
 > 
