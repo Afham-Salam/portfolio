@@ -13,7 +13,7 @@ type MenuItems = {
 type Props = {};
 
 
-const MobileMenu: React.FC<{ menuItems: MenuItems[],isOpen:boolean }> = ({ menuItems,isOpen }) => (
+const MobileMenu: React.FC<{ menuItems: MenuItems[],isOpen:boolean,closeMenu:() => any }> = ({ menuItems,isOpen,closeMenu}) => (
 <div className="relative">
 <div
   className={`absolute top-5   w-[200px] h-screen bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-md z-50 transition-transform duration-500 ease-in-out ${
@@ -25,6 +25,8 @@ const MobileMenu: React.FC<{ menuItems: MenuItems[],isOpen:boolean }> = ({ menuI
         to={it.path}
         key={it.id}
         className="block px-4 py-2 text-white font-semibold"
+        onClick={closeMenu}
+        
       >
         {it.name}
       </NavLink>
@@ -36,6 +38,10 @@ const MobileMenu: React.FC<{ menuItems: MenuItems[],isOpen:boolean }> = ({ menuI
 export default function Navbar({}: Props) {
  
   const [menu, setMenu] = useState<boolean>(false);
+ 
+
+  const closeMenu = () => setMenu(false);
+
 
   return (
     <div className="fixed flex  items-center bg-black justify-between w-full h-[70px]  z-[100] shadow-md px-4 md:px-6 lg:px-10">
@@ -63,7 +69,7 @@ export default function Navbar({}: Props) {
               />
             )}
           </svg>
-          {menu && <MobileMenu menuItems={MenuItems} isOpen={menu} />}
+          {menu && <MobileMenu menuItems={MenuItems} isOpen={menu} closeMenu={closeMenu} />}
         </div>
 
         {/* Logo */}
