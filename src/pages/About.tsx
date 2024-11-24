@@ -9,7 +9,7 @@ export default function About({}: Props) {
         
       </p>
 
-      <div className="flex md:flex-row flex-col lg:gap-32 gap-8  ">
+      <div className="flex md:flex-row flex-col lg:gap-32 gap-8 md:px-4 px-2 lg:px-0  ">
         <div className=" text-justify text-gray-300 lg:w-[500px]  p-2 leading-relaxed">
           I'm a passionate MERN stack developer with a strong foundation in
           building dynamic and responsive web applications. With expertise in
