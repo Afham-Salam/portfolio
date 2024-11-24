@@ -46,7 +46,7 @@ export default function Contact({}: Props) {
 
 
   return (
-    <div  className="w-full lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20  items-center justify-center bg-black">
+    <div  className="w-full md:h-screen lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20  items-center justify-center bg-black">
       
         <p className="text-center text-3xl text-white font-semibold tracking-wider  first-letter:text-[#fec544] ">
           CONTACT ME
