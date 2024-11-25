@@ -22,6 +22,9 @@ const MenuItems = [
   ]
   export const projects=[
     {id:1,name:'Goku Clone',img:"/goku.jpg",details:"React-Tailwind CSS",},
+    {id:1,name:'Goku Clone',img:"/goku.jpg",details:"React-Tailwind CSS",},
+    {id:1,name:'Goku Clone',img:"/goku.jpg",details:"React-Tailwind CSS",},
+    
   
     
     

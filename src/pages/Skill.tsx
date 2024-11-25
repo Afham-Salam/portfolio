@@ -13,10 +13,10 @@ type Props = {}
 
 export default function Skill({}: Props) {
   return (
-    <div className='w-full  lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20  items-center justify-center bg-black'>
-       <p className="first-letter:text-[#fec544] text-4xl tracking-wider font-semibold text-white">
-        SKILLS
-      </p>
+    <div className='w-full  lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20  items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black'>
+       <p className="text-5xl lg:text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
+     SKILLS
+    </p>
 
       <div className="flex gap-6 flex-wrap justify-center items-center lg:px-20 ">
   {skills.map((skill: skills) => (

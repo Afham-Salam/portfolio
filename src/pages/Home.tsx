@@ -1,5 +1,5 @@
 
-import photo from "/photo.jpg";
+import photo from "/photo2.jpg";
 import { Link } from "react-router-dom";
 import About from "./About";
 import Skill from "./Skill";
@@ -13,14 +13,14 @@ export default function Home({}: Props) {
     <>
     <div
       id="home"
-      className="lg:h-[93vh]  w-full flex flex-col-reverse md:flex-row justify-center items-center lg:gap-7 gap-5  bg-black pt-20 lg:pt-0"
+      className="lg:h-[93vh]  w-full flex flex-col-reverse md:flex-row justify-center items-center lg:gap-7 gap-5  bg-gradient-to-b from-black via-gray-900 to-black pt-20 lg:pt-0"
     >
       <div className=" text-white flex justify-center flex-col lg:gap-5 gap-3 px-4 pb-3 ">
         <p className="text-[20px] md:text-[22px] lg:text-[25px]">Hello! I'm </p>
         <p className="text-[34px] md:text-[40px] lg:text-[60px] font-bold tracking-wide">
           Afham Salam
         </p>
-        <p className="text-[24px]  lg:text-[26px] text-[#fec544] tracking-wider">
+        <p className="text-[24px]  lg:text-[26px] text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 tracking-wider">
           Mern Stack Developer
         </p>
         <div className="w-full md:w-[400px] lg:w-[600px]">
@@ -84,14 +84,20 @@ export default function Home({}: Props) {
             </Link>
           </div>
         </div>
-        <button className="text-black bg-[#ffbb33] hover:bg-[#d4a434] rounded-md py-2 px-3 w-[120px]">
+        <button className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-400 hover:to-yellow-600 text-black rounded-md py-2 px-3 w-[120px]">
           <a href="https://api.whatsapp.com/send?phone=7594078322">Hire Me</a>
         </button>
       </div>
 
-      <div className="">
-        <img src={photo} alt="photo" className="md:w-[370px] w-[300px]" />
-      </div>
+      <div className="rounded-full  bg-gradient-to-b from-black via-gray-900 to-black">
+  <img 
+    src={photo} 
+    alt="photo" 
+    className="md:w-[370px] w-[300px] rounded-full object-cover"
+  />
+</div>
+
+
      
     </div>
     <About/>
