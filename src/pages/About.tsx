@@ -3,7 +3,7 @@ type Props = {};
 
 export default function About({}: Props) {
   return (
-    <div className="w-full lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20 items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
+    <div className="w-full md:h-full lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20 items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
     
     <p className="text-5xl lg:text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
       ABOUT
