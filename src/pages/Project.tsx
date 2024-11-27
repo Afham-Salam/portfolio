@@ -7,13 +7,15 @@ type projects = {
   name: string;
   img: string;
   details: string;
+  github: string;
+  live: string;
 };
 
 type Props = {};
 
 export default function Project({}: Props) {
   return (
-    <div className="w-full lg:h-screen flex flex-col items-center justify-center gap-12 py-12 bg-gradient-to-b from-black via-gray-900 to-black">
+    <div id="projects" className="w-full lg:h-screen flex flex-col items-center justify-center gap-12 py-12 bg-gradient-to-b from-black via-gray-900 to-black">
     
     <p className="text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
       PROJECTS
@@ -24,7 +26,7 @@ export default function Project({}: Props) {
       {projects.map((project: projects) => (
         <div
           key={project.id}
-          className="bg-[#1f1f1f] rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center p-6 gap-4 transform hover:-translate-y-2"
+          className="bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center p-6 gap-4 transform hover:-translate-y-2"
         >
           {/* Project Image */}
           <div className="relative overflow-hidden rounded-md">
@@ -34,7 +36,7 @@ export default function Project({}: Props) {
               className="w-full h-[200px] object-cover hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-              <p className="text-white text-center px-4 text-sm leading-relaxed">
+              <p className="text-yellow-400 text-center font-bold px-4 text-sm leading-relaxed">
                 {project.details}
               </p>
             </div>
@@ -49,7 +51,7 @@ export default function Project({}: Props) {
           <div className="flex gap-4 mt-4">
             {/* View Button */}
             <Link
-              to={"https://goku-clone.netlify.app"}
+              to={project.live}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold rounded-md py-2 px-5 hover:opacity-90 transition duration-300"
@@ -58,7 +60,7 @@ export default function Project({}: Props) {
             </Link>
             {/* GitHub Button */}
             <Link
-              to={"https://github.com/Afham-Salam/Goku-Clone"}
+              to={project.github}
               target="_blank"
               rel="noopener noreferrer"
               className="relative text-gray-300 border-2 border-yellow-400 rounded-md py-2 px-5 overflow-hidden group"

@@ -3,7 +3,7 @@ type Props = {};
 
 export default function About({}: Props) {
   return (
-    <div className="w-full md:h-full lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20 items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
+    <div id="about" className="w-full md:h-full lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20 items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
     
     <p className="text-5xl lg:text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
       ABOUT
@@ -12,7 +12,7 @@ export default function About({}: Props) {
    
     <div className="flex md:flex-row flex-col lg:gap-24 gap-12 px-4 lg:px-0 items-center">
       {/* About Text */}
-      <div className="text-justify text-gray-300 lg:w-[500px] leading-relaxed p-4 border-l-4 border-yellow-500 bg-opacity-10 bg-gray-700 rounded-lg shadow-lg">
+      <div  data-aos="fade-left" className="text-justify text-gray-300 lg:w-[500px] leading-relaxed p-4 border-l-4 border-yellow-500 bg-opacity-10 bg-gray-700 rounded-lg shadow-lg">
         <p>
           I'm a passionate MERN stack developer with a strong foundation in
           building dynamic and responsive web applications. With expertise in

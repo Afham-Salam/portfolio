@@ -21,15 +21,15 @@ const MobileMenu: React.FC<{ menuItems: MenuItems[],isOpen:boolean,closeMenu:() 
   }`}
 > 
      {menuItems.map((it) => (
-      <NavLink
-        to={it.path}
+      <a
+        href={it.path}
         key={it.id}
         className="block px-4 py-2 text-white font-semibold"
         onClick={closeMenu}
         
       >
         {it.name}
-      </NavLink>
+      </a>
     ))}
   </div>
 </div>
@@ -83,13 +83,13 @@ export default function Navbar({}: Props) {
       {/* Desktop Navigation Links */}
       <div className="hidden lg:flex gap-10 items-center">
         {MenuItems.map((it:MenuItems) => (
-          <NavLink
-            to={it.path}
+          <a
+            href={it.path}
             key={it.id}
             className="text-white font-semibold "
           >
             {it.name}
-          </NavLink>
+          </a>
         ))}
       </div>
     </div>

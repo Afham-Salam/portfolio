@@ -46,7 +46,7 @@ export default function Contact({}: Props) {
 
 
   return (
-    <div className="w-full lg:h-screen flex flex-col lg:pt-10 pt-20 items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+    <div id='contact' className="w-full lg:h-screen flex flex-col lg:pt-10 pt-20 items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
  
 
   {/* Heading with Margin */}
@@ -134,7 +134,7 @@ export default function Contact({}: Props) {
       {/* Social Media */}
       <div>
         <p className="text-gray-400 mb-2">Visit my social profiles</p>
-        <div className="flex gap-4">
+        <div className="flex gap-9">
           <a href="https://www.linkedin.com/in/afham-salam" target="_blank" >
             <FaLinkedin size={28} className="text-white hover:text-yellow-500 transition" />
           </a>
@@ -155,9 +155,7 @@ export default function Contact({}: Props) {
     </div>
   </div>
 
-  <p className="text-sm text-gray-400 mt-8 text-center">
-    © {new Date().getFullYear()} Afham Salam. All Rights Reserved.
-  </p>
+  
 </div>
 
 
