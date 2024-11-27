@@ -5,10 +5,6 @@ import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home.tsx';
 
-import About from './pages/About.tsx';
-import Skill from './pages/Skill.tsx';
-import Project from './pages/Project.tsx';
-import Contact from './pages/Contact.tsx';
 
 
 
