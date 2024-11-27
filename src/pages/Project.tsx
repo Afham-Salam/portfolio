@@ -15,7 +15,7 @@ type Props = {};
 
 export default function Project({}: Props) {
   return (
-    <div id="projects" className="w-full lg:h-screen flex flex-col items-center justify-center gap-12 py-12 bg-gradient-to-b from-black via-gray-900 to-black">
+    <div id="projects" className="w-full lg:h-screen flex flex-col items-center justify-center gap-12 lg:pt-10 pt-20 bg-gradient-to-b from-black via-gray-900 to-black">
     
     <p className="text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
       PROJECTS
