@@ -58,7 +58,7 @@ export default function Contact({}: Props) {
     {/* Form Section */}
     <form
       onSubmit={handleSubmit}
-      className="bg-gray-800 bg-opacity-90 rounded-xl p-6 flex flex-col gap-4 w-full lg:w-[450px] shadow-lg"
+      className="bg-gray-800 bg-opacity-90 rounded-xl p-6 flex flex-col gap-4 w-full lg:w-[450px] shadow-lg mb-3"
     >
       <p className="text-white text-xl font-semibold">Just Say Hello</p>
       <input
@@ -102,7 +102,7 @@ export default function Contact({}: Props) {
     </form>
 
     {/* Contact Info Section */}
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 ">
       <p className="text-white text-xl font-semibold">Contact Info</p>
       <div className="grid grid-cols-1 gap-4">
         {/* Email */}
@@ -133,8 +133,8 @@ export default function Contact({}: Props) {
 
       {/* Social Media */}
       <div>
-        <p className="text-gray-400 mb-2">Visit my social profiles</p>
-        <div className="flex gap-9">
+        <p className="text-gray-400 mb-2 ">Visit my social profiles</p>
+        <div className="flex gap-9 mb-3 ">
           <a href="https://www.linkedin.com/in/afham-salam" target="_blank" >
             <FaLinkedin size={28} className="text-white hover:text-yellow-500 transition" />
           </a>
