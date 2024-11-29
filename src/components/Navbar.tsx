@@ -1,94 +1,117 @@
 import React, { useState } from "react";
-
 import MenuItems from "../data";
 
-
-
-type MenuItems = {
+type MenuItem = {
   id: number;
   name: string;
   path: string;
 };
 
-type Props = {};
+type MobileMenuProps = {
+  menuItems: MenuItem[];
+  isOpen: boolean;
+  closeMenu: () => void;
+};
 
+const MobileMenu: React.FC<MobileMenuProps> = ({ menuItems, isOpen, closeMenu }) => (
+  <div className="relative">
+    {/* Sliding Menu */}
+    <div
+      className={`fixed top-0 left-0 w-full max-w-xs h-full bg-black bg-opacity-90 shadow-md z-50 transition-transform duration-500 ease-in-out ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
+    >
+      {/* Close Icon */}
+      <div className="flex justify-end p-4">
+        <svg
+          onClick={closeMenu}
+          className="text-white cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="white"
+            d="M18.3 5.71L12 12.01 5.7 5.71 4.29 7.12l6.3 6.3-6.3 6.3 1.42 1.41 6.3-6.3 6.29 6.3 1.42-1.41-6.3-6.3 6.3-6.3z"
+          />
+        </svg>
+      </div>
 
-const MobileMenu: React.FC<{ menuItems: MenuItems[],isOpen:boolean,closeMenu:() => any }> = ({ menuItems,isOpen,closeMenu}) => (
-<div className="relative">
-<div
-  className={`absolute top-5   w-[200px] h-screen bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-md z-50 transition-transform duration-500 ease-in-out ${
-    isOpen ? "translate-x-0 -left-5" : "-translate-x-full left-0"
-  }`}
-> 
-     {menuItems.map((it) => (
-      <a
-        href={it.path}
-        key={it.id}
-        className="block px-4 py-2 text-white font-semibold"
+      {/* Menu Items */}
+      {menuItems.map((item) => (
+        <a
+          href={item.path}
+          key={item.id}
+          className="block text-left text-white font-semibold py-4 px-6 hover:bg-gray-800 transition-colors duration-300"
+          onClick={closeMenu}
+        >
+          {item.name}
+        </a>
+      ))}
+    </div>
+
+    {/* Overlay */}
+    {isOpen && (
+      <div
+        className="fixed inset-0 bg-black bg-opacity-50 z-40"
         onClick={closeMenu}
-        
-      >
-        {it.name}
-      </a>
-    ))}
+      ></div>
+    )}
   </div>
-</div>
 );
 
-export default function Navbar({}: Props) {
- 
-  const [menu, setMenu] = useState<boolean>(false);
- 
+type NavbarProps = {};
 
-  const closeMenu = () => setMenu(false);
+export default function Navbar({}: NavbarProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="fixed flex  items-center bg-black justify-between w-full h-[70px]  z-[100] shadow-md px-4 md:px-6 lg:px-10">
-      
+    <div className="fixed flex items-center justify-between w-full h-[70px] bg-black z-50 shadow-md px-4 md:px-6 lg:px-10">
+      {/* Logo and Menu Toggle */}
       <div className="flex items-center w-full gap-3 lg:w-auto">
-        
+        {/* Hamburger Menu */}
         <div className="lg:hidden">
           <svg
-            onClick={() => setMenu(!menu)}
+            onClick={() => setMenuOpen(!menuOpen)}
             className="text-white cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="30"
             viewBox="0 0 24 24"
           >
-            {!menu ? (
-              <path
-                fill="white"
-                d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
-              />
+            {!menuOpen ? (
+              <path fill="white" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z" />
             ) : (
-              <path
-                fill="white"
-                d="M18.3 5.71L12 12.01 5.7 5.71 4.29 7.12l6.3 6.3-6.3 6.3 1.42 1.41 6.3-6.3 6.29 6.3 1.42-1.41-6.3-6.3 6.3-6.3z"
-              />
+             ""
             )}
           </svg>
-          {menu && <MobileMenu menuItems={MenuItems} isOpen={menu} closeMenu={closeMenu} />}
+          <MobileMenu
+            menuItems={MenuItems}
+            isOpen={menuOpen}
+            closeMenu={closeMenu}
+          />
         </div>
 
         {/* Logo */}
-        <div className="flex-grow lg:flex-grow-0 ">
+        <div className="flex-grow lg:flex-grow-0">
           <p className="text-[22px] md:text-[25px] text-white font-semibold tracking-widest first-letter:text-[#fec544]">
-           Portfolio
+            Portfolio
           </p>
         </div>
       </div>
 
       {/* Desktop Navigation Links */}
-      <div className="hidden lg:flex gap-10 items-center">
-        {MenuItems.map((it:MenuItems) => (
+      <div className="hidden lg:flex gap-8 items-center">
+        {MenuItems.map((item) => (
           <a
-            href={it.path}
-            key={it.id}
-            className="text-white font-semibold "
+            href={item.path}
+            key={item.id}
+            className="text-white font-semibold hover:text-gray-400 transition-colors duration-300"
           >
-            {it.name}
+            {item.name}
           </a>
         ))}
       </div>
