@@ -21,8 +21,10 @@ const MenuItems = [
     {id:11,name:'Github',img:"/github.webp"},
   ]
   export const projects=[
-    {id:1,name:'Goku Clone',img:"/goku.jpg",details:"React-Tailwind CSS",github:"https://github.com/Afham-Salam/Goku-Clone",live:'https://goku-clone.netlify.app'},
-    {id:2,name:'Room Booking Application',img:"/room-booking.jpg",details:"React-NodeJs-ExpressJs-MongoDB", github:"https://github.com/Afham-Salam/Room-Booking",live:'https://room-booking-frontend-6llk.onrender.com'},
+    {id:1,name:'Digital Marketing Chatbot', img:"/room-booking.jpg",details: "Intership Project - React ,Tailwind",github:"https://github.com/Afham-Salam/Room-Booking",live:'https://room-booking-frontend-6llk.onrender.com'},
+    {id:2,name:'Room Booking Application', img:"/room-booking.jpg",details:"Full Stack Project", github:"https://github.com/Afham-Salam/Room-Booking",live:'https://room-booking-frontend-6llk.onrender.com'},
+    {id:3,name:'E commerce',img:"/room-booking.jpg",details:"Full Stack Project", github:"https://github.com/Afham-Salam/Room-Booking",live:'https://room-booking-frontend-6llk.onrender.com'},
+    {id:4,name:'Goku Clone',img:"/goku.jpg",details:"React-Tailwind CSS",github:"https://github.com/Afham-Salam/Goku-Clone",live:'https://goku-clone.netlify.app'},
     
     
   
