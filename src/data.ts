@@ -14,11 +14,12 @@ const MenuItems = [
     {id:4,name:'NodeJS',img:"/nodejs.webp"},
     {id:5,name:'ExpressJS',img:"/express.png"},
     {id:6,name:'Typescript',img:"/typescript.png"},
-    {id:7,name:'Git',img:"/git.webp"},
+    {id:7,name:'Redux',img:"/redux.svg"},
     {id:8,name:'Html/CSS',img:"/html.webp"},
     {id:9,name:'Tailwind CSS',img:"/tailwind.png"},
     {id:10,name:'Bootstrap',img:"/bootstrap.webp"},
     {id:11,name:'Github',img:"/github.webp"},
+    {id:11,name:'Git',img:"/git.webp"},
   ]
   export const projects=[
     {id:1,name:'Digital Marketing Chatbot', img:"/chatbot.jpg",details: "Intership Project - React ,Tailwind",github:"https://github.com/Afham-Salam/Chatbot",live:'https://dm-chatbot.appii.space/'},
