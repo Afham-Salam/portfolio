@@ -33,7 +33,7 @@ export default function Project({}: Props) {
              <img
               src={project.img}
               alt={project.name}
-              className="w-full h-[200px] object-cover hover:scale-110 transition-transform duration-500"
+              className=" h-[200px] object-cover hover:scale-110 transition-transform duration-500"
             /> 
             
           </div>

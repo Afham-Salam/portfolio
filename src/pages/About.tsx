@@ -40,7 +40,7 @@ export default function About({}: Props) {
   
     {/* Download CV Button */}
     <a
-      href="/JaysonDas.pdf"
+      href="/AFHAM-SALAM-Resume.pdf"
       download
       className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-400 hover:to-yellow-600 text-black font-bold py-3 px-6 rounded-md shadow-md transform hover:scale-105 transition-transform duration-300"
     >
