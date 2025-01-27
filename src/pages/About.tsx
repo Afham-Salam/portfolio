@@ -1,18 +1,29 @@
-
+import "aos/dist/aos.css";
+import Aos from 'aos';
+import { useEffect } from "react";
 type Props = {};
 
 export default function About({}: Props) {
+
+  useEffect(() => {
+      Aos.init({
+        duration: 1000, // Animation duration in milliseconds
+        easing: "ease-in-out", // Default easing
+       
+      });
+    }, []);
   return (
     <div id="about" className="w-full md:h-full lg:h-screen flex flex-col lg:pt-0 pt-20 gap-20 items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
     
-    <p className="text-5xl lg:text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
+    <p  data-aos="fade-down" className="text-5xl lg:text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
       ABOUT
     </p>
   
    
     <div className="flex md:flex-row flex-col lg:gap-24 gap-12 px-4 lg:px-0 items-center">
       {/* About Text */}
-      <div  data-aos="fade-left" className="text-justify text-gray-300 lg:w-[500px] leading-relaxed p-4 border-l-4 border-yellow-500 bg-opacity-10 bg-gray-700 rounded-lg shadow-lg">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="text-justify text-gray-300 lg:w-[500px] leading-relaxed p-4 border-l-4 border-yellow-500 bg-opacity-10 bg-gray-700 rounded-lg shadow-lg">
         <p>
           I'm a passionate MERN stack developer with a strong foundation in
           building dynamic and responsive web applications. With expertise in
@@ -24,7 +35,8 @@ export default function About({}: Props) {
       </div>
   
       {/* Education Section */}
-      <div className="lg:w-[22rem] md:w-[19rem] w-fit bg-gradient-to-b from-yellow-500 via-yellow-400 to-yellow-300 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="lg:w-[22rem] md:w-[19rem] w-fit bg-gradient-to-b from-yellow-500 via-yellow-400 to-yellow-300 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
         <div className="bg-black bg-opacity-70 rounded-xl p-6">
           <p className="text-2xl font-bold text-white tracking-wide mb-4">
             Education

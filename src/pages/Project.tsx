@@ -1,6 +1,8 @@
 
+import { useEffect } from "react";
 import { projects } from "../data";
 import { Link } from "react-router-dom";
+import Aos from "aos";
 
 type projects = {
   id: number;
@@ -14,10 +16,17 @@ type projects = {
 type Props = {};
 
 export default function Project({}: Props) {
+  useEffect(() => {
+      Aos.init({
+        duration: 1000, // Animation duration in milliseconds
+        easing: "ease-in-out", // Default easing
+       
+      });
+    }, []);
   return (
     <div id="projects" className="w-full  flex flex-col items-center justify-center gap-12 lg:pt-10 pt-20 bg-gradient-to-b from-black via-gray-900 to-black">
     
-    <p className="text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
+    <p data-aos="fade-down" className="text-5xl tracking-wider font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
       PROJECTS
     </p>
   
@@ -25,6 +34,8 @@ export default function Project({}: Props) {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 lg:px-20">
       {projects.map((project: projects) => (
         <div
+        data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom"
           key={project.id}
           className="bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center p-5 gap-2 transform hover:-translate-y-2"
         >

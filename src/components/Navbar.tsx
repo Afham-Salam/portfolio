@@ -97,7 +97,7 @@ export default function Navbar({}: NavbarProps) {
 
         {/* Logo */}
         <div className="flex-grow lg:flex-grow-0">
-          <p className="text-[22px] md:text-[25px] text-white font-semibold tracking-widest first-letter:text-[#fec544]">
+          <p className=" uppercase text-[22px] md:text-[25px]  font-semibold tracking-widest text-[#fec544]">
             Portfolio
           </p>
         </div>
