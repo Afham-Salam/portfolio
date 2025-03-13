@@ -1,19 +1,25 @@
+import { Outlet } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Preloader from "./components/Preloader";
 
-import { Outlet } from 'react-router-dom'
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
 
- import Navbar from './components/Navbar'
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 3000); // Simulating load time
+  }, []);
 
-type Props = {}
-
-export default function App({}: Props) {
-  
   return (
     <>
-    <Navbar/> 
-   
-    <Outlet />
-    
-    
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <>
+          <Navbar />
+          <Outlet />
+        </>
+      )}
     </>
-  )
+  );
 }
