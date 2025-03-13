@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { gsap } from "gsap";
+import { OrbitControls } from "three-stdlib";
 
 const Preloader: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
