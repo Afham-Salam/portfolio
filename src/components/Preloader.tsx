@@ -24,8 +24,7 @@ const Preloader: React.FC = () => {
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-     //renderer.setClearColor(0x452afc);
-
+   
     const light = new THREE.HemisphereLight(0xffffff, 0xb4b3f2, 1);
     scene.add(light);
 
