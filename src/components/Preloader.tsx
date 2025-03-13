@@ -111,7 +111,6 @@ const Preloader: React.FC = () => {
     animateRings();
     animateCamera();
     render();
-
     return () => {
       window.removeEventListener("resize", resize);
     };
